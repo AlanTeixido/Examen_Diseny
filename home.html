@@ -1,17 +1,18 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>VibesFest 2025</title>
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="styles.css" />
 </head>
 
 <body>
     <!-- Header Section -->
     <header>
         <div class="logo">
-            <img src="img/logo.jpg.jpg" alt="VibesFest 2025">
+            <!-- <img src="img/logo2.jpg.jpg" alt="VibesFest 2025"> -->
         </div>
         <nav>
             <ul class="menu">
@@ -28,33 +29,89 @@
     </header>
 
     <main>
-    <!-- Hero Section -->
-    <section id="hero">
-        <video autoplay muted loop playsinline id="hero-video">
-          <source src="./img/festival.mp4" type="video/mp4" />
-          Your browser does not support the video tag.
-        </video>
-        <div class="hero-content">
-          <h2>VibesFest 2025</h2>
-          <p>
-            Discover a new world of events for trending people like you.
-          </p>
-        </div>
-      </section>
+        <!-- Hero Section -->
+        <section id="hero">
+            <video autoplay muted loop playsinline id="hero-video">
+                <source src="./img/festival.mp4" type="video/mp4" />
+                Your browser does not support the video tag.
+            </video>
+            <div class="hero-content">
+                <h2>VibesFest 2025</h2>
+                <p>Discover a new world of events for trending people like you.</p>
+            </div>
+        </section>
 
         <!-- Info Section -->
+        <section id="info" class="festival-info">
+            <h2>Sobre el Festival</h2>
+            <p><strong>Dates:</strong> 15-17 de juny de 2025</p>
+            <p><strong>Ubicació:</strong> Parc del Fòrum, Barcelona</p>
+            <h3>Gèneres musicals:</h3>
+            <ul>
+                <li>Pop</li>
+                <li>Rock</li>
+                <li>Electrònica</li>
+                <li>Indie</li>
+            </ul>
+        </section>
 
+        <!-- Artist Section -->
+        <section id="artists" class="featured-artists">
+            <h2>Artistes Destacats</h2>
+            <div class="gallery">
+                <!-- Afegeix 8 imatges d'artistes -->
+                <img src="img/imgen1.jpg.jpg" alt="Artista 1" />
+                <img src="img/imagen2.jpg.jpg" alt="Artista 2" />
+                <img src="img/imagen3.jpg.jpg" alt="Artista 3" />
+                <img src="img/imagen4.jpg.jpg" alt="Artista 4" />
+                <img src="img/imagen5.jpg.jpg" alt="Artista 5" />
+                <img src="img/imagen6.jpg.jpg" alt="Artista 6" />
+                <img src="img/imagen7.jpg.jpg" alt="Artista 7" />
+                <img src="img/imagen8.jpg.jpg" alt="Artista 8" />
+            </div>
+        </section>
 
+        <!-- Sound Section -->
+        <section id="media" class="media">
+            <h2>Canço</h2>
+            <audio controls>
+                <source src="img/playlist.mp3" type="audio/mp3" />
+                El teu navegador no suporta àudio HTML5.
+            </audio>
+        </section>
 
+        <!-- Contact Section -->
+        <section id="contact">
+            <h3>Contact Us</h3>
+            <form class="contact-form">
+                <label for="name">Name</label>
+                <input type="text" id="name" name="name" placeholder="Your Name" required />
 
+                <label for="email">Email</label>
+                <input type="email" id="email" name="email" placeholder="Your Email" required />
 
+                <label for="message">Message</label>
+                <textarea id="message" name="message" rows="5" placeholder="Your Message" required></textarea>
+
+                <button type="submit" class="btn">Send Message</button>
+            </form>
+        </section>
     </main>
 
+    <!-- Footer Section -->
+    <footer>
+        <p>&copy; 2025 VibesFest. All rights reserved.</p>
+        <p>Contacta'ns: info@vibesfest.com</p>
+        <p>Telèfon: 123-456-789</p>
+        <div class="social-icons">
+            <a href="#"><img src="./img/instagram.png" /></a>
+            <a href="#"><img src="./img/twitter.png" /></a>
+            <a href="#"><img src="./img/linkedin.png" /></a>
+        </div>
 
+        <p>Disseny web per Alan Teixido</p>
 
-
-
-
-
-
+    </footer>
 </body>
+
+</html>
