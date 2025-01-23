@@ -1,62 +1,99 @@
+/* General Styles */
 body {
     margin: 0;
     font-family: Arial, sans-serif;
     line-height: 1.6;
+    background-color: #1a1a1a;
 }
 
-header {
+/* General Styles */
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+  }
+  
+  .logo img {
+    width: 50px;
+    height: auto;
+  }
+  
+  .logo h1 {
+    font-size: 24px;
+    color: #ff4500;
+  }
+  
+  /* Header */
+  header {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 1rem 2rem;
-    background-color: #333;
-    color: white;
+    padding: 20px;
+    background: linear-gradient(90deg, #1a1a1a, #2b2b2b);
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+    transition: background-color 0.3s ease;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
 }
-
-.logo img {
-    max-width: 150px;
-}
-
-nav {
+  .logo {
     display: flex;
     align-items: center;
-}
+    gap: 10px;
+  }
 
-.menu {
-    list-style: none;
-    display: flex;
-    margin: 0;
-    padding: 0;
-}
-
-.menu li {
-    margin: 0 1rem;
-}
-
-.menu a {
-    color: white;
-    text-decoration: none;
-    transition: color 0.3s;
-}
-
-.menu a:hover {
-    color: #ff6600;
-}
-
-.hamburger-menu {
+  
+  nav {
+    position: relative;
+  }
+  
+  /* Menu Toggle */
+  nav input#menu-toggle {
+    display: none;
+  }
+  
+  .hamburger-menu {
     display: none;
     flex-direction: column;
     cursor: pointer;
-}
-
-.hamburger-menu span {
+    gap: 5px;
+  }
+  
+  .hamburger-menu span {
     background: white;
     height: 3px;
-    margin: 4px 0;
     width: 25px;
-}
+    border-radius: 3px;
+  }
+  
+  /* Menu */
+  nav ul.menu {
+    list-style: none;
+    display: flex;
+    gap: 15px;
+    margin: 0;
+    padding: 0;
+  }
+  
+  nav ul.menu li a {
+    color: white;
+    text-decoration: none;
+    font-size: 16px;
+    padding: 10px 15px;
+    border-radius: 5px;
+    transition: background-color 0.3s, color 0.3s;
+  }
+  
+  nav ul.menu li a:hover {
+    background-color: #ff4500;
+    color: #ffffff;
+  }
 
 
+  
+  
 /* Hero Section */
 #hero {
     height: 100vh;
@@ -122,37 +159,96 @@ nav {
 }
 
 
+
+
 /* Festival Info Section */
 .festival-info {
-    padding: 2rem;
-    background: #f4f4f4;
+    border-top: 3px solid #ff4500;
+    padding: 3rem 1.5rem;
+    color: #ff4500;
+    text-align: center;
+    margin: 0 auto;
 }
 
 .festival-info h2 {
-    text-align: center;
-    margin-bottom: 1rem;
+    font-size: 2.2rem;
+    margin-bottom: 1.5rem;
+    color: #ff4500;
+    text-transform: uppercase;
+    border-bottom: 2px solid #ff4500;
+    display: inline-block;
+    padding-bottom: 0.5rem;
+}
+
+.festival-info p {
+    font-size: 1.1rem;
+    margin: 1rem 0;
+    line-height: 1.5;
+    color: #e6e6e6;
 }
 
 .festival-info ul {
-    list-style: square;
-    padding-left: 2rem;
+    list-style: none;
+    padding: 0;
+    margin-top: 1.5rem;
+    display: flex;
+    justify-content: center;
+    gap: 1.5rem;
+    flex-wrap: wrap;
 }
+
+.festival-info ul li {
+    background: #2b2b2b;
+    padding: 0.8rem 1rem;
+    border-radius: 8px;
+    color: #ff4500;
+    font-weight: bold;
+    font-size: 1rem;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+.festival-info ul li:hover {
+    transform: scale(1.1);
+    background-color: #ff4500;
+    color: #1a1a1a;
+}
+
+
+
+
 
 /* Featured Artists Section */
 .featured-artists {
-    padding: 2rem;
-    background: white;
+    border-top: 3px solid #ff4500;
+    color: #ff4500;
+    padding: 2rem 1rem;
     text-align: center;
 }
 
+.featured-artists h2 {
+    font-size: 2rem;
+    margin-bottom: 2rem;
+    text-transform: uppercase;
+    color: #ff4500;
+    border-bottom: 2px solid #ff4500;
+    display: inline-block;
+    padding-bottom: 0.5rem;
+}
+
+/* Responsive Gallery */
 .featured-artists .gallery {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
-    gap: 1rem;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1.5rem;
+    justify-items: center;
+    align-items: center;
 }
 
 .featured-artists img {
-    width: 100%;
+    width: 100%; 
+    height: 250px; 
+    object-fit: cover; 
     border-radius: 10px;
     transition: transform 0.3s, box-shadow 0.5s;
 }
@@ -162,16 +258,33 @@ nav {
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 
+
+
 /* Media Section */
 .media {
-    padding: 2rem;
-    background: #f4f4f4;
+    border-top: 3px solid #ff4500;
+    color: #ff4500;
+    padding: 2rem 1rem;
     text-align: center;
+    background: #1a1a1a; 
 }
+
+.media h2 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+    text-transform: uppercase;
+    color: #ff4500;
+    padding-bottom: 5rem;
+}
+
 .media audio {
-    max-width: 100%;
-    margin: 1rem 0;
+    max-width: 400px; 
+    width: 100%; 
+    margin: 1rem auto;
+    border-radius: 10px;
 }
+
+
 
 
 /* Contact Section */
@@ -193,7 +306,6 @@ nav {
     max-width: 600px;
     margin: 0 auto;
     padding: 20px;
-    background-color: #1a1a1a;
     border-radius: 10px;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
 }
@@ -246,13 +358,11 @@ nav {
     box-shadow: 0 6px 15px rgba(255, 69, 0, 0.5);
 }
 
-
 /* Footer */
 footer {
     color: #ff4500;
     padding: 20px;
     text-align: center;
-    background-color: #1a1a1a;
     border-top: 2px solid #ff4500;
 }
 
@@ -278,14 +388,67 @@ footer p {
 }
 
 
-
 /* Responsive Design */
+
+@media (max-width: 1199px) and (min-width: 768px) {
+    .featured-artists .gallery {
+        grid-template-columns: repeat(2, 1fr); 
+    }
+}
+
+@media (max-width: 767px) {
+    .featured-artists .gallery {
+        grid-template-columns: 1fr; 
+    }
+}
+
 @media (max-width: 768px) {
-    .menu {
-        display: none;
+    .festival-info {
+        padding: 2rem 1rem;
     }
 
+    .festival-info h2 {
+        font-size: 1.8rem;
+    }
+
+    .festival-info ul {
+        gap: 1rem;
+    }
+
+    .festival-info ul li {
+        padding: 0.7rem 0.8rem;
+        font-size: 0.9rem;
+    }
+}
+
+@media (max-width: 768px) {
     .hamburger-menu {
-        display: flex;
+      display: flex;
+    }
+  
+    nav ul.menu {
+      display: none;
+      flex-direction: column;
+      background-color: #333;
+      position: absolute;
+      top: 100%;
+      right: 0;
+      width: 200px;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+      z-index: 1000;
+    }
+  
+    nav input#menu-toggle:checked ~ ul.menu {
+      display: flex;
+    }
+  }
+  
+
+  @media (max-width: 768px) {
+    .media h2 {
+        font-size: 1.5rem;
+    }
+    .media audio {
+        max-width: 300px; 
     }
 }
